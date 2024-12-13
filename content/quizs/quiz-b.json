@@ -1,5 +1,5 @@
 {
-    "slug": "quizB",
+    "slug": "quiz-b",
     "title": "Shrek",
     "questions": [
         {
@@ -10,7 +10,7 @@
                 "Aurore",
                 "Flora"
             ],
-            "correct": 1
+            "response": "Fiona"
         },
         {
             "question": "Quel est le nom du royaume où vivent Shrek et Fiona  ?",
@@ -20,7 +20,7 @@
                 "Hollywood, Los Angeles",
                 "Fort Fort Lointain"
             ],
-            "correct": 3
+            "response": "Fort Fort Lointain"
         },
         {
             "question": "Où habite Shrek ?",
@@ -30,7 +30,7 @@
                 "Dans un marais",
                 "Dans une grotte"
             ],
-            "correct": 2
+            "response": "Dans un marais"
         },
         {
             "question": "Quel est le message principal de la saga Shrek ?",
@@ -40,7 +40,7 @@
                 "Qu'être vert après tout, c'est pas si mal",
                 "Que les gens petits avec des coupes de cheveux affreuses sont méchants"
             ],
-            "correct": 1
+            "response": "L'acceptation de soi et des autres, quelles que soient les apparences"
         }
     ]
 

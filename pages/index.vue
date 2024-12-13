@@ -1,18 +1,20 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const quizs = ref([]);
+const quizs = await queryContent('quizs').find();
+console.log(quizs)
+// const quizs = ref([]);
 
-onMounted(async () => {
-  const context = import.meta.glob('@/content/quiz-*.json');
-  const modules = await Promise.all(Object.values(context).map((m) => m()));
-  quizs.value = modules.map((mod) => mod.default);
-});
+// onMounted(async () => {
+//   const context = import.meta.glob('@/content/quizs/quiz-*.json');
+//   const modules = await Promise.all(Object.values(context).map((m) => m()));
+//   quizs.value = modules.map((mod) => mod.default);
+// });
 
 </script>
 
 <template>
-  <div>
+  <NuxtLayout name="header">
     <h1>QUIZZOSS</h1>
     <h1>Liste des quizs</h1>
     <ul >
@@ -20,9 +22,9 @@ onMounted(async () => {
         <h2 class="font-semibold text-3xl">{{ quiz.title }}</h2>
         <p>{{ quiz.questions.length }} questions</p>
         <button class="bg-lime-200 p-2 my-4 rounded">
-            <NuxtLink :to="`/quiz/${quiz.slug}`">Commencer le quiz</NuxtLink>
+            <NuxtLink :to="`/quizs/${quiz.slug}`">Commencer le quiz</NuxtLink>
         </button>
       </li>
     </ul>
-  </div>
+  </NuxtLayout>
 </template>

@@ -6,9 +6,7 @@ export default function useQuiz(quizData) {
     const score = ref(0);
 
     const nextQuestion = () => {
-        if (currentQuestionIndex.value < quiz.value.questions.length - 1) {
-            currentQuestionIndex.value++;
-        }
+        currentQuestionIndex.value++;
     };
 
     const prevQuestion = () => {

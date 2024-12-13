@@ -1,5 +1,5 @@
 {
-    "slug": "quizC",  
+    "slug": "quiz-c",  
     "title": "Jeux Vidéo",
     "questions": [
         {
@@ -10,7 +10,7 @@
                 "Dollar",
                 "Simoleon"
             ],
-            "correct": 0
+            "response": 0
         },
         {
             "question": "Quel est le nom du personnage principal de la saga The Legend of Zelda?",
@@ -20,7 +20,7 @@
                 "Zelda",
                 "Link"
             ],
-            "correct": 3
+            "response": 3
         },
         {
             "question": "Quel est le nom du premier jeu vidéo à avoir utilisé un système de microtransactions ?",
@@ -30,7 +30,7 @@
                 "Habbo Hotel",
                 "Madrid"
             ],
-            "correct": 2
+            "response": 2
         },
         {
             "question": "Dans quel jeu vidéo incarne-t-on un personnage nommé Lara Croft ?",
@@ -40,7 +40,7 @@
                 "Amour Sucré",
                 "Lara Croft, le jeu"
             ],
-            "correct": 0
+            "response": 0
         }
         
     ]

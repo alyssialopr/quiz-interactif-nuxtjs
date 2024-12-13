@@ -1,5 +1,5 @@
 {
-    "slug": "quizA",
+    "slug": "quiz-a",
     "title": "Marvel",
     "questions": [
         {
@@ -10,7 +10,7 @@
                 "Aquaman",
                 "Batman"
             ],
-            "correct": 0
+            "response": "Iron Man"
         },
         {
             "question": "Qui est le créateur de l'univers Marvel?",
@@ -20,7 +20,7 @@
                 "Stan Lee",
                 "Jean-Paul Sartre"
             ],
-            "correct": 3
+            "response": "Stan Lee"
         },
         {
             "question": "Quel est le nom de l'objet qui donne à Thor ses pouvoirs?",
@@ -30,7 +30,7 @@
                 "Mijölir",
                 "Myölnird"
             ],
-            "correct": 1
+            "response": "Mjöllnir"
         },
         {
             "question": "Quel est le nom du scientifique qui a créé Hulk?",
@@ -40,7 +40,7 @@
                 "David Banner",
                 "Jennifer Walters"
             ],
-            "correct": 2
+            "response": "David Banner"
         }
     ]
 
