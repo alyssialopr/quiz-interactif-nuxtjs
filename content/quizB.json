@@ -1,0 +1,46 @@
+{
+    "title": "Quiz B : Shrek",
+    "questions": [
+        {
+            "question": "Quel est le nom de la princesse que Shrek doit sauver, dans le film Shrek?",
+            "answers": [
+                "Elena",
+                "Fiona",
+                "Aurore",
+                "Flora"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Quel est le nom du royaume où vivent Shrek et Fiona  ?",
+            "answers": [
+                "Lointain et oublié",
+                "Très Très Loin",
+                "Hollywood, Los Angeles",
+                "Fort Fort Lointain"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Où habite Shrek ?",
+            "answers": [
+                "Au fond d'un cimetièrre",
+                "Dans un chateau",
+                "Dans un marais",
+                "Dans une grotte"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Quel est le message principal de la saga Shrek ?",
+            "answers": [
+                "Habiter dans un marais, c'est vraiment pas cool",
+                "L'acceptation de soi et des autres, quelles que soient les apparences",
+                "Qu'être vert après tout, c'est pas si mal",
+                "Que les gens petits avec des coupes de cheveux affreuses sont méchants"
+            ],
+            "correct": 1
+        }
+    ]
+
+}

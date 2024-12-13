@@ -1,0 +1,47 @@
+{
+    "title": "Quiz C : Jeux Vidéo",
+    "questions": [
+        {
+            "question": "Comment appelle-t-on les unités de monnaie dans le jeu Les Sims4 ?",
+            "answers": [
+                "Simflouz",
+                "Motherload",
+                "Dollar",
+                "Simoleon"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Quel est le nom du personnage principal de la saga The Legend of Zelda?",
+            "answers": [
+                "Zélena",
+                "Galadriel",
+                "Zelda",
+                "Link"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Quel est le nom du premier jeu vidéo à avoir utilisé un système de microtransactions ?",
+            "answers": [
+                "Paris",
+                "Amour Sucré",
+                "Habbo Hotel",
+                "Madrid"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Dans quel jeu vidéo incarne-t-on un personnage nommé Lara Croft ?",
+            "answers": [
+                "Tomb and Raider",
+                "Indiana Jones",
+                "Amour Sucré",
+                "Lara Croft, le jeu"
+            ],
+            "correct": 0
+        }
+        
+    ]
+
+}

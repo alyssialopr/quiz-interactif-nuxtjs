@@ -1,0 +1,46 @@
+{
+    "title": "Quiz A : Marvel",
+    "questions": [
+        {
+            "question": "Quel est le nom du super-héros interprété par Robert Downey Jr. dans l'univers Marvel ?",
+            "answers": [
+                "Iron Man",
+                "Captain America",
+                "Aquaman",
+                "Batman"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Qui est le créateur de l'univers Marvel?",
+            "answers": [
+                "Kelley Jones",
+                "Brandon Sanderson",
+                "Stan Lee",
+                "Jean-Paul Sartre"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Quel est le nom de l'objet qui donne à Thor ses pouvoirs?",
+            "answers": [
+                "Jonathan",
+                "Mjöllnir",	
+                "Mijölir",
+                "Myölnird"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Quel est le nom du scientifique qui a créé Hulk?",
+            "answers": [
+                "Bruce Wayne",
+                "Bruce Banner",
+                "David Banner",
+                "Jennifer Walters"
+            ],
+            "correct": 2
+        }
+    ]
+
+}
