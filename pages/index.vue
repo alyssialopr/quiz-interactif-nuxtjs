@@ -1,30 +1,28 @@
 <script setup>
-import { useQuizs } from '@/composables/useQuizs.js'; 
+import { ref, onMounted } from 'vue';
 
-const quizs = await useQuizs();
+const quizs = ref([]);
+
+onMounted(async () => {
+  const context = import.meta.glob('@/content/quiz-*.json');
+  const modules = await Promise.all(Object.values(context).map((m) => m()));
+  quizs.value = modules.map((mod) => mod.default);
+});
+
 </script>
 
-<!-- <template>
-    <div>
-      <h1>Liste des quiz</h1>
-      <ul>
-        <li v-for="quiz in quizs" :key="quiz.slug">
-          <h2>{{ quiz.title }}</h2>
-          <p>{{ quiz.questions.length }} questions</p>
-          <NuxtLink :to="`/quiz/${quiz.slug}`">Commencer le quiz</NuxtLink>
-        </li>
-      </ul> -->
-      <!-- <Button @click="nextQuestion">Next</Button> -->
-    <!-- </div>
-  </template> -->
-
-  <template>
-    <div>
-      <div v-for="quiz in quizs" :key="quiz.id">
-        <h2>{{ quiz.title }}</h2>
-        <p>Number of questions: {{ quiz.questions }}</p>
-      </div>
-    </div>
-  </template>
-  
-  
+<template>
+  <div>
+    <h1>QUIZZOSS</h1>
+    <h1>Liste des quizs</h1>
+    <ul >
+      <li class="border-gray-300 border rounded-md m-10 p-6 shadow-2xl"  v-for="quiz in quizs" :key="quiz.slug">
+        <h2 class="font-semibold text-3xl">{{ quiz.title }}</h2>
+        <p>{{ quiz.questions.length }} questions</p>
+        <button class="bg-lime-200 p-2 my-4 rounded">
+            <NuxtLink :to="`/quiz/${quiz.slug}`">Commencer le quiz</NuxtLink>
+        </button>
+      </li>
+    </ul>
+  </div>
+</template>

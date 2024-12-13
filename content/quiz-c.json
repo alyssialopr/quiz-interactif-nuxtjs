@@ -1,5 +1,6 @@
 {
-    "title": "Quiz C : Jeux Vidéo",
+    "slug": "quizC",  
+    "title": "Jeux Vidéo",
     "questions": [
         {
             "question": "Comment appelle-t-on les unités de monnaie dans le jeu Les Sims4 ?",

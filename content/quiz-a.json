@@ -1,5 +1,6 @@
 {
-    "title": "Quiz A : Marvel",
+    "slug": "quizA",
+    "title": "Marvel",
     "questions": [
         {
             "question": "Quel est le nom du super-héros interprété par Robert Downey Jr. dans l'univers Marvel ?",

@@ -1,5 +1,6 @@
 {
-    "title": "Quiz B : Shrek",
+    "slug": "quizB",
+    "title": "Shrek",
     "questions": [
         {
             "question": "Quel est le nom de la princesse que Shrek doit sauver, dans le film Shrek?",

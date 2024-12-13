@@ -1,45 +1,53 @@
 <script setup>
-import { ref } from 'vue';
-import { useQuiz } from '@/composables/useQuiz';
-import { useRoute } from 'vue-router';
-
+import { useRoute } from "vue-router";
+import useQuiz from "@/composables/useQuiz";
 const route = useRoute();
-const quiz = await useQuiz(route.params.slug);
+const slug = route.params.quiz;
+const data = await queryContent(slug).findOne();
+const { quiz, currentQuestionIndex, nextQuestion, prevQuestion, score } =
+  useQuiz(data);
 
-const currentQuestionIndex = ref(0);
-const currentQuestion = computed(() => quiz.questions[currentQuestionIndex.value]);
-
-function answer(selectedOption) {
-  if (selectedOption === currentQuestion.value.reponse) {
-    alert('Bonne réponse !');
-  } else {
-    alert('Mauvaise réponse.');
+const submitAnswer = (answer) => {
+  console.log("Answer submitted:", answer);
+  // Increment score if the answer is correct (assuming you have a way to check correctness)
+  if (
+    answer === quiz.value.questions[currentQuestionIndex.value].correctAnswer
+  ) {
+    score.value++;
   }
+  nextQuestion();
+};
 
-  if (currentQuestionIndex.value < quiz.questions.length - 1) {
-    currentQuestionIndex.value++;
-  } else {
-    currentQuestionIndex.value = null; // Fin du quiz
-  }
-}
+console.log(quiz);
 </script>
 
 <template>
-    <div>
-      <h1>{{ quiz.title }}</h1>
-      <p>Question {{ currentQuestionIndex + 1 }}/{{ quiz.questions.length }}</p>
-      <div v-if="currentQuestion">
-        <p>{{ currentQuestion.text }}</p>
-        <div>
-          <button
-            v-for="(option, index) in currentQuestion.options"
-            :key="index"
-            @click="answer(option)"
-          >
-            {{ option }}
-          </button>
-        </div>
-      </div>
-      <p v-else>Quiz terminé !</p>
+  <div v-if="quiz">
+    <h1>{{ quiz.title }}</h1>
+    <div v-if="currentQuestionIndex < quiz.questions.length">
+      <h2 class="text-2xl font-bold">
+        {{ quiz.questions[currentQuestionIndex].question }}
+      </h2>
+      <p>{{ currentQuestionIndex + 1 }} / {{ quiz.questions.length }}</p>
+      <ul>
+        <li
+          v-for="answer in quiz.questions[currentQuestionIndex].answers"
+          :key="answer"
+        >
+          <button @click="submitAnswer(answer)">{{ answer }}</button>
+        </li>
+      </ul>
+      <button
+        class="bg-teal-300"
+        @click="prevQuestion"
+        :disabled="currentQuestionIndex === 0"
+      >
+        Précédent
+      </button>
     </div>
-  </template>
+    <div v-else class="bg-white p-4">
+      <h2 class="text-2xl font-bold">Quiz terminé !</h2>
+      <p>Votre score : {{ score }} / {{ quiz.questions.length }}</p>
+    </div>
+  </div>
+</template>
